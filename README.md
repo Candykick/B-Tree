@@ -30,4 +30,4 @@
 `node * redistribute_nodes(node * root, node * n, node * neighbor, int neighbor_index, int k_prime_index, int k_prime)` : 삭제 작업이 이루어져서 record의 갯수가 부족해진 노드가 있을 때, 이 노드의 이웃 노드에서 가장 왼쪽이나 오른쪽 key와 pointer를 가져와서 삭제가 이루어진 노드에 붙이는 함수. 이 때 이웃 노드에서 가져온 key와 pointer를 삭제 작업이 이루어진 노드에 붙일 때 merge가 이루어진다.
 
 # Merge의 Detail Flow
-![B+Tree_Merge_](uploads/dbb89dbca4d175efc61c0409c8fbe977/B+Tree_Merge_.png)
+![B+Tree_Merge_](B+Tree_Merge_.png)
