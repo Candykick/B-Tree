@@ -19,6 +19,15 @@
 
 # Delete의 Call Path
 ![B+Tree_Delete_](B+Tree_Delete_.png)
-※ Merge 작업은 제외하고 서술함. Merge 과정은 [Merge](https://hconnect.hanyang.ac.kr/2020_ite2038_11801/2020_ite2038_2015000346/-/wikis/Merge)에서 자세히 서술.
+※ Merge 작업은 제외하고 서술함. Merge 과정은 아래에서 자세히 서술.
 
 ※ redistribute_nodes는 Split과 Merge가 같이 이루어지는데, Merge 작업에 더 가깝다고 생각해서 Merge에서 서술했습니다.
+
+
+# Merge 작업이 실행되는 함수
+`node * coalesce_nodes(node * root, node * n, node * neighbor, int neighbor_index, int k_prime)` : 삭제 작업이 이루어진 노드와 그 이웃 노드를 merge하는 작업이 있다.
+
+`node * redistribute_nodes(node * root, node * n, node * neighbor, int neighbor_index, int k_prime_index, int k_prime)` : 삭제 작업이 이루어져서 record의 갯수가 부족해진 노드가 있을 때, 이 노드의 이웃 노드에서 가장 왼쪽이나 오른쪽 key와 pointer를 가져와서 삭제가 이루어진 노드에 붙이는 함수. 이 때 이웃 노드에서 가져온 key와 pointer를 삭제 작업이 이루어진 노드에 붙일 때 merge가 이루어진다.
+
+# Merge의 Detail Flow
+![B+Tree_Merge_](uploads/dbb89dbca4d175efc61c0409c8fbe977/B+Tree_Merge_.png)
