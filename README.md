@@ -18,7 +18,7 @@
 `node * destroy_tree(node * root)` : B+ Tree의 모든 노드를 메모리에서 해제한다. main 함수에서 트리 삭제 작업을 요청하면 이 함수가 실행된다.
 
 # Delete의 Call Path
-![B+Tree_Delete_](uploads/2c92428dae02452a5c74fe6b5e81fce8/B+Tree_Delete_.png)
+![B+Tree_Delete_](B+Tree_Delete_.png)
 ※ Merge 작업은 제외하고 서술함. Merge 과정은 [Merge](https://hconnect.hanyang.ac.kr/2020_ite2038_11801/2020_ite2038_2015000346/-/wikis/Merge)에서 자세히 서술.
 
 ※ redistribute_nodes는 Split과 Merge가 같이 이루어지는데, Merge 작업에 더 가깝다고 생각해서 Merge에서 서술했습니다.
